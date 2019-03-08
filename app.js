@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
     const redblue = ['blue', 'blue', 'red', 'red'];
-    const fields = ['teamName', 'deScore', 'capFlip', 'stackCap', 'catapult', 'flywheel'];
+    const fields = ['teamName', 'descore', 'flipcaps', 'stackcaps', 'catapult', 'flywheel'];
     res.render("landing", {
         redblue: redblue,
         inputfields: fields

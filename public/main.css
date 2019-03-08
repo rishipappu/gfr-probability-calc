@@ -4,32 +4,26 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-}
+  background: #101010; }
 
 .team {
-  padding: 2em;
-  flex: 1 1 25%;
-}
+  padding: 1em;
+  flex: 1 1 25%; }
 
 .blue {
-  color: blue;
-}
+  color: #66a0ff; }
 
 .red {
-  color: red;
-}
+  color: red; }
 
 .bluelabel, .redlabel {
   display: block;
-  text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
 .databox {
-  margin: 1em;
-}
+  margin: 1em; }
 
 .wrapper {
-  display: flex;
-}
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */
