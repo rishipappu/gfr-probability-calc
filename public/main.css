@@ -1,0 +1,35 @@
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.team {
+  padding: 2em;
+  flex: 1 1 25%;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.bluelabel, .redlabel {
+  display: block;
+  text-transform: capitalize;
+}
+
+.databox {
+  margin: 1em;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */

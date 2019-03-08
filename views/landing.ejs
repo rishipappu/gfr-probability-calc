@@ -1,0 +1,38 @@
+<% include partials/header %>
+<div>
+    <form class="teamform" action="/stats" method="GET">
+        <div class="wrapper">
+            <% for(i=0; i < redblue.length; i++) { %>
+            <div class="team <%= redblue[i] %>">
+                <div class="databox">
+                    <label class="<%= redblue[i] %>label"
+                        for="<%= redblue[i]+inputfields[0]+i %>">
+                        <%= redblue[i]%> Team
+                    </label>
+                    <input type="text"
+                        name="<%= redblue[i]+'_'+inputfields[0]+i %>"
+                        id="<%= redblue[i]+inputfields[0]+i %>"
+                        placeholder="Team Name">
+                </div>
+                <% for(j=1; j < inputfields.length; j++) { %>
+                <div class="databox">
+                    <label class="<%= redblue[i] %>label"
+                        for="<%= redblue[i]+'_'+inputfields[j] %>">
+                        Can the <%= redblue[i] %> alliance partner
+                        <%= inputfields[j].toLowerCase() %> ?
+                    </label>
+                    <select name="<%= redblue[i]+'_'+inputfields[j]+i %>"
+                        id="<%= redblue[i]+'_'+inputfields[j] %>">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+        </div>
+        <input type="submit">
+    </form>
+</div>
+
+<% include partials/footer %>

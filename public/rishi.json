@@ -1,0 +1,361 @@
+﻿{
+    "315R": {
+            "rank": 62,
+            "wins": 36,
+            "losses": 11,
+            "ccwm": 82.82444600000001,
+            "max_score": 242,
+            "opr": 102.24135,
+            "dpr": 19.416913,
+            "competitions": 8,
+            "ties": 5.960464477539063e-08
+    },
+    
+    "315Z": {
+            "rank": 98,
+            "wins": 16,
+            "losses": 13,
+            "ccwm": 20.298502,
+            "max_score": 132,
+            "opr": 50.9748,
+            "dpr": 30.676289999999998,
+            "competitions": 5,
+            "ties": 5.120000000000001e-06
+    },
+    
+    "824B": {
+            "rank": 34,
+            "wins": 13,
+            "losses": 6,
+            "ccwm": 11.586703,
+            "max_score": 81,
+            "opr": 28.52413,
+            "dpr": 16.93745,
+            "competitions": 3,
+            "ties": 0.0
+    },
+    
+    "824C": {
+            "rank": 70,
+            "wins": 18,
+            "losses": 13,
+            "ccwm": 31.0558,
+            "max_score": 138,
+            "opr": 57.21771000000001,
+            "dpr": 26.161966999999997,
+            "competitions": 5,
+            "ties": 2.5600000000000005e-06
+    },
+    
+    "824J": {
+            "rank": 35,
+            "wins": 12,
+            "losses": 7,
+            "ccwm": 18.54913,
+            "max_score": 87,
+            "opr": 34.77952,
+            "dpr": 16.23035,
+            "competitions": 3,
+            "ties": 0.0
+    },
+    
+    "824Z": {
+            "rank": 25,
+            "wins": 7,
+            "losses": 5,
+            "ccwm": 6.2199599999999995,
+            "max_score": 55,
+            "opr": 23.01088,
+            "dpr": 16.79093,
+            "competitions": 2,
+            "ties": 0.0
+    },
+    
+    "1350Z": {
+            "rank": 15,
+            "wins": 19,
+            "losses": 3,
+            "ccwm": 28.1597,
+            "max_score": 93,
+            "opr": 33.78786,
+            "dpr": 5.6281300000000005,
+            "competitions": 3,
+            "ties": 0.0
+    },
+    
+    "2075A": {
+            "rank": 127,
+            "wins": 16,
+            "losses": 16,
+            "ccwm": 10.763739999999999,
+            "max_score": 134,
+            "opr": 48.61832,
+            "dpr": 37.85453,
+            "competitions": 5,
+            "ties": 5.120000000000001e-06
+    },
+    
+    "3948A": {
+            "rank": 25,
+            "wins": 15,
+            "losses": 7,
+            "ccwm": 1.1048969999999994,
+            "max_score": 88,
+            "opr": 29.383982000000003,
+            "dpr": 28.27906,
+            "competitions": 4,
+            "ties": 3.0517578125e-05
+    },
+    
+    "5327R": {
+            "rank": 112,
+            "wins": 13,
+            "losses": 13,
+            "ccwm": -2.521180000000001,
+            "max_score": 112,
+            "opr": 28.47019,
+            "dpr": 30.991410000000002,
+            "competitions": 4,
+            "ties": 1.52587890625e-05
+    },
+    
+    "5327S": {
+            "rank": 21,
+            "wins": 20,
+            "losses": 5,
+            "ccwm": 29.56203,
+            "max_score": 120,
+            "opr": 45.369659999999996,
+            "dpr": 15.80762,
+            "competitions": 4,
+            "ties": 3.0517578125e-05
+    },
+    
+    "5327X": {
+            "rank": 66,
+            "wins": 30,
+            "losses": 12,
+            "ccwm": 44.62719,
+            "max_score": 187,
+            "opr": 74.14402,
+            "dpr": 29.516768999999996,
+            "competitions": 7,
+            "ties": 5.203995766722911e-07
+    },
+    
+    "5776A": {
+            "rank": 104,
+            "wins": 36,
+            "losses": 14,
+            "ccwm": 52.185579999999995,
+            "max_score": 201,
+            "opr": 82.84328000000001,
+            "dpr": 30.657510000000002,
+            "competitions": 7,
+            "ties": 0.0
+    },
+    
+    "5776C": {
+            "rank": 58,
+            "wins": 26,
+            "losses": 18,
+            "ccwm": 14.824379999999998,
+            "max_score": 170,
+            "opr": 55.352850000000004,
+            "dpr": 40.52854,
+            "competitions": 6,
+            "ties": 5.953741807651273e-07
+    },
+    
+    "5776E": {
+            "rank": 39,
+            "wins": 25,
+            "losses": 5,
+            "ccwm": 55.2085197,
+            "max_score": 161,
+            "opr": 72.88441,
+            "dpr": 17.675846999999997,
+            "competitions": 5,
+            "ties": 0.0
+    },
+    
+    "5776T": {
+            "rank": 94,
+            "wins": 33,
+            "losses": 11,
+            "ccwm": 29.03588,
+            "max_score": 207,
+            "opr": 71.83524,
+            "dpr": 42.79928,
+            "competitions": 7,
+            "ties": 0.0
+    },
+    
+    "5776X": {
+            "rank": 116,
+            "wins": 31,
+            "losses": 22,
+            "ccwm": 23.36244,
+            "max_score": 197,
+            "opr": 68.50301,
+            "dpr": 45.14061,
+            "competitions": 8,
+            "ties": 1.7881393432617188e-07
+    },
+    
+    "7916A": {
+            "rank": 145,
+            "wins": 25,
+            "losses": 26,
+            "ccwm": -6.019838999999999,
+            "max_score": 191,
+            "opr": 44.26578,
+            "dpr": 50.28572,
+            "competitions": 7,
+            "ties": 0.0
+    },
+    
+    "8583A": {
+            "rank": 2,
+            "wins": 16,
+            "losses": 3,
+            "ccwm": 0,
+            "max_score": 29,
+            "opr": 0,
+            "dpr": 0,
+            "competitions": 1,
+            "ties": 0.0
+    },
+    
+    "9328Y": {
+            "rank": 25,
+            "wins": 12,
+            "losses": 12,
+            "ccwm": -0.751237,
+            "max_score": 31,
+            "opr": 7.86839,
+            "dpr": 8.61962,
+            "competitions": 2,
+            "ties": 0.00390625
+    },
+    
+    "9328Z": {
+            "rank": 46,
+            "wins": 7,
+            "losses": 18,
+            "ccwm": -7.3913,
+            "max_score": 48,
+            "opr": 3.10275,
+            "dpr": 10.494,
+            "competitions": 2,
+            "ties": 0.0
+    },
+    
+    "15287A": {
+            "rank": 10,
+            "wins": 14,
+            "losses": 5,
+            "ccwm": -1.6879819999999999,
+            "max_score": 53,
+            "opr": 11.726140000000001,
+            "dpr": 13.41413,
+            "competitions": 2,
+            "ties": 0.00390625
+    },
+    
+    "19000H": {
+            "rank": 104,
+            "wins": 14,
+            "losses": 18,
+            "ccwm": -10.571010000000001,
+            "max_score": 133,
+            "opr": 35.93262,
+            "dpr": 46.503699999999995,
+            "competitions": 5,
+            "ties": 0.0
+    },
+    
+    "21246D": {
+            "rank": 85,
+            "wins": 41,
+            "losses": 14,
+            "ccwm": 91.21496,
+            "max_score": 255,
+            "opr": 115.2638,
+            "dpr": 24.048700000000004,
+            "competitions": 8,
+            "ties": 0.0
+    },
+    
+    "21246R": {
+            "rank": 170,
+            "wins": 13,
+            "losses": 24,
+            "ccwm": -29.66928,
+            "max_score": 137,
+            "opr": 30.890420000000002,
+            "dpr": 60.55964,
+            "competitions": 6,
+            "ties": 0.0
+    },
+    
+    "22095A": {
+            "rank": 34,
+            "wins": 49,
+            "losses": 12,
+            "ccwm": 72.82005000000001,
+            "max_score": 242,
+            "opr": 91.77974999999998,
+            "dpr": 18.9597498,
+            "competitions": 8,
+            "ties": 5.960464477539063e-08
+    },
+    
+    "29760A": {
+            "rank": 19,
+            "wins": 13,
+            "losses": 10,
+            "ccwm": 0.84933,
+            "max_score": 50,
+            "opr": 7.6282,
+            "dpr": 6.77887,
+            "competitions": 2,
+            "ties": 0.0078125
+    },
+    
+    "40079A": {
+            "rank": 14,
+            "wins": 14,
+            "losses": 9,
+            "ccwm": 0.0354127,
+            "max_score": 51,
+            "opr": 8.15775,
+            "dpr": 8.12234,
+            "competitions": 2,
+            "ties": 0.0078125
+    },
+    
+    "81818X": {
+            "rank": 70,
+            "wins": 18,
+            "losses": 9,
+            "ccwm": 33.452200000000005,
+            "max_score": 122,
+            "opr": 46.50262,
+            "dpr": 13.050429999999999,
+            "competitions": 4,
+            "ties": 0.0
+    },
+    
+    "84025B": {
+            "rank": 3,
+            "wins": 14,
+            "losses": 5,
+            "ccwm": 0,
+            "max_score": 11,
+            "opr": 0,
+            "dpr": 0,
+            "competitions": 1,
+            "ties": 0.0
+    }
+}
