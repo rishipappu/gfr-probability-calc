@@ -1,7 +1,10 @@
 <% include partials/header %>
 
 <div class="returneddata">
-    <%= data['315R']['rank'] %>
+    <% for(let i = 0; i < redblue.length; i++) { %>
+    <h2><%= teams[i] %></h2>
+    <h5><%= percentages[i] %></h5>
+    <% } %>
 </div>
 
 <% include partials/footer %>

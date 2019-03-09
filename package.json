@@ -17,12 +17,16 @@
   },
   "homepage": "https://github.com/rishipappu/node-thing-for-apollo#readme",
   "dependencies": {
+    "chart.js": "^2.7.3",
     "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "file-system": "^2.2.2",
+    "jStat": "^1.7.1",
     "jsonfile": "^5.0.0",
+    "mathjs": "^5.6.0",
     "nodemon": "^1.18.10",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "scipy": "^0.1.4"
   }
 }

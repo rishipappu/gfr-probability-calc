@@ -6,8 +6,8 @@
             <div class="team <%= redblue[i] %>">
                 <div class="databox">
                     <label class="<%= redblue[i] %>label"
-                        for="<%= redblue[i]+inputfields[0]+i %>">
-                        <%= redblue[i]%> Team
+                        for="<%= inputfields[0]+i %>">
+                        <%= redblue[i] %> Team
                     </label>
                     <input type="text"
                         name="<%= redblue[i]+'_'+inputfields[0]+i %>"
@@ -17,15 +17,22 @@
                 <% for(j=1; j < inputfields.length; j++) { %>
                 <div class="databox">
                     <label class="<%= redblue[i] %>label"
-                        for="<%= redblue[i]+'_'+inputfields[j] %>">
+                        for="<%= inputfields[j]+i %>">
                         Can the <%= redblue[i] %> alliance partner
                         <%= inputfields[j].toLowerCase() %> ?
                     </label>
-                    <select name="<%= redblue[i]+'_'+inputfields[j]+i %>"
-                        id="<%= redblue[i]+'_'+inputfields[j] %>">
+                    <select name="<%= inputfields[j]+i %>"
+                        id="<%= inputfields[j]+i %>">
                         <option value="true">True</option>
                         <option value="false">False</option>
                     </select>
+                </div>
+                <div class="databox">
+                    <label for="<%= 'importance_'+i %>">Importance:</label>
+                    <input placeholder="Enter a number between 0 and 1"
+                        type="float"
+                        name="<%= 'importance_'+inputfields[j]+i %>"
+                        id="<%= 'importance_'+i %>">
                 </div>
                 <% } %>
             </div>
