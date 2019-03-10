@@ -9,7 +9,8 @@
                         for="<%= inputfields[0]+i %>">
                         <%= redblue[i] %> Team
                     </label>
-                    <input type="text"
+                    <input class="geninput <%= redblue[i] + 'border' %>"
+                        type="text"
                         name="<%= redblue[i]+'_'+inputfields[0]+i %>"
                         id="<%= redblue[i]+inputfields[0]+i %>"
                         placeholder="Team Name">
@@ -18,10 +19,11 @@
                 <div class="databox">
                     <label class="<%= redblue[i] %>label"
                         for="<%= inputfields[j]+i %>">
-                        Can the <%= redblue[i] %> alliance partner
-                        <%= inputfields[j].toLowerCase() %> ?
+                        Does the <%= redblue[i] %> alliance partner
+                        <%= questionphrases[j].toLowerCase() %> ?
                     </label>
-                    <select name="<%= inputfields[j]+i %>"
+                    <select class="dropdown <%= redblue[i] + 'border' %>"
+                        name="<%= inputfields[j]+i %>"
                         id="<%= inputfields[j]+i %>">
                         <option value="true">True</option>
                         <option value="false">False</option>
@@ -29,7 +31,8 @@
                 </div>
                 <div class="databox">
                     <label for="<%= 'importance_'+i %>">Importance:</label>
-                    <input placeholder="Enter a number between 0 and 1"
+                    <input class="geninput <%= redblue[i] + 'border' %>"
+                        placeholder="Enter a number between 0 and 1"
                         type="float"
                         name="<%= 'importance_'+inputfields[j]+i %>"
                         id="<%= 'importance_'+i %>">

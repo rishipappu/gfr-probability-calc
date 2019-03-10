@@ -1,10 +1,90 @@
 <% include partials/header %>
-
-<div class="returneddata">
-    <% for(let i = 0; i < redblue.length; i++) { %>
-    <h2><%= teams[i] %></h2>
-    <h5><%= percentages[i] %></h5>
-    <% } %>
+<div class="outerwrapper">
+    <div class="wrapper">
+        <!-- <div class="cards">
+            <div onclick="toggleWideview()" class="graphcard">
+                <div class="face">
+                    <canvas class="graph" id="graph0"></canvas>
+                    <h3 class="blue teamname">5327S</h3>
+                </div>
+            </div>
+            <div class="graphcard">
+                <div class="face">
+                    <canvas class="graph" id="graph1"></canvas>
+                    <h3 class="blue teamname">
+                        5327S</h3>
+                </div>
+            </div>
+            <div class="graphcard">
+                <div class="face">
+                    <canvas class="graph" id="graph2"></canvas>
+                    <h3 class="blue teamname">5327S</h3>
+                </div>
+            </div>
+            <div class="graphcard">
+                <div class="face">
+                    <canvas class="graph" id="graph3"></canvas>
+                    <h3 class="blue teamname">5327S</h3>
+                </div>
+            </div>
+        </div> -->
+        <% for(let i = 0; i < redblue.length; i++) { %>
+        <div class="teamdata">
+            <canvas class="teamstats" id="<%= 'graph'+[i] %>">
+            </canvas>
+            <h2 class="<%= redblue[i] %>"><%= teams[i] %></h2>
+            <h5>Confidence Rating: <%= percentages[i] + '%' %></h5>
+            <p>W-L: <%= teamdata[i][0] + '-' + teamdata[i][1] %></p>
+            <% for (let k = 1; k < labels.length; k++) { %>
+            <p><%= labels[k].toUpperCase() + ': ' + Math.round(teamdata[i][k] * 100) / 100 %>
+            </p>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+    <div class="alliancestrengths">
+        <div class="alliancestrength blue">
+            <h3>Alliance Strength: <%= alliancestrengths[0] +'%' %></h3>
+        </div>
+        <div class="alliancestrength red">
+            <h3>Alliance Strength: <%= alliancestrengths[1] + '%' %></h3>
+        </div>
+    </div>
 </div>
 
+<script>
+    function toggleWideview() {
+        $(".graphcard").toggleClass("wide");
+    }
+</script>
+
+<% for(let j = 0; j < redblue.length; j++) { %>
+<script>
+    Chart.defaults.global.defaultFontColor = '#666';
+    Chart.defaults.global.defaultFontFamily = 'Segoe UI';
+    new Chart(document.getElementById("<%= 'graph'+[j] %>"), {
+        type: 'radar',
+        data: {
+            labels: ["wins", "losses", "ccwm", "opr", "dpr"],
+            datasets: [{
+                data: [<%= teamdata[j] %>],
+                backgroundColor: '<%= colors[j] %>'
+            }],
+        },
+        options: {
+            layout: {
+                padding: 0
+            },
+            legend: {
+                display: false
+            },
+            scale: {
+                ticks: {
+                    display: false,
+                }
+            }
+        }
+    })
+</script>
+<% } %>
 <% include partials/footer %>

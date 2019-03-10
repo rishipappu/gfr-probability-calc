@@ -1,22 +1,20 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const request = require("request");
-const fs = require("file-system");
 const jsf = require("jsonfile");
-const chart = require('chart.js')
 
-const descoreWeight = 0;
-const flipcapsWeight = 0;
-const stackcapsWeight = 0;
-const catapultWeight = 0;
-const flywheelWeight = 0;
 const redblue = ['blue', 'blue', 'red', 'red'];
 
 const propconst = (numbertrue, ccwm, opr, descore, capflip, capstack, vcatapult, vflywheel) => {
-    const scaledscore = ccwm * (descore + capflip + capstack + vcatapult + vflywheel) + (numbertrue * opr)
-    const percentage = 10 * Math.abs(scaledscore / ccwm)
+    const scaledscore = ccwm * (descore + capflip + capstack + vcatapult + vflywheel) + (numbertrue * opr * ccwm)
+    const percentage = 10 * Math.abs(scaledscore / (opr * ccwm))
     return Math.round(percentage * 100) / 100
+}
+
+const alliancestrength = (oprblue, oprred, confidence1, confidence2, ccwmblue, ccwmred) => {
+    const scaledstrength = (confidence1 * confidence2) * Math.abs(confidence1 - confidence2) / Math.pow(Math.abs(oprblue - oprred), 2)
+    const alliancestrength = scaledstrength / Math.abs(ccwmred - ccwmblue)
+    return 100 * Math.round(alliancestrength * 100) / 100
 }
 
 require('dotenv').config();
@@ -29,9 +27,11 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
     const fields = ['teamName', 'descore', 'flipcaps', 'stackcaps', 'catapult', 'flywheel'];
+    const questionphrases = ['teamName', 'descore', 'flip caps', 'stack caps', 'have a catapult', 'have a flywheel']
     res.render("landing", {
         redblue: redblue,
-        inputfields: fields
+        inputfields: fields,
+        questionphrases: questionphrases
     });
 });
 
@@ -75,14 +75,34 @@ app.get("/stats", (req, res) => {
             let percentage1 = propconst(numbertrue1, obj[name1]['ccwm'], obj[name1]['opr'], Number(query.importance_descore1), Number(query.importance_flipcaps1), Number(query.importance_stackcaps1), Number(query.importance_catapult1), Number(query.importance_flywheel1))
             let percentage2 = propconst(numbertrue2, obj[name2]['ccwm'], obj[name2]['opr'], Number(query.importance_descore2), Number(query.importance_flipcaps2), Number(query.importance_stackcaps2), Number(query.importance_catapult2), Number(query.importance_flywheel2))
             let percentage3 = propconst(numbertrue3, obj[name3]['ccwm'], obj[name3]['opr'], Number(query.importance_descore3), Number(query.importance_flipcaps3), Number(query.importance_stackcaps3), Number(query.importance_catapult3), Number(query.importance_flywheel3))
+            let ccwmred = obj[name2]["ccwm"] + obj[name3]["ccwm"]
+            let ccwmblue = obj[name0]["ccwm"] + obj[name1]["ccwm"]
+            let oprblue = obj[name0]["opr"] + obj[name1]["opr"]
+            let oprred = obj[name2]["opr"] + obj[name3]["opr"]
+
+            const alliancestrengthblue = alliancestrength(oprblue, oprred, percentage0, percentage1, ccwmblue, ccwmred)
+            const alliancestrengthred = alliancestrength(oprblue, oprred, percentage2, percentage3, ccwmblue, ccwmred)
+            const alliancestrengths = [alliancestrengthblue, alliancestrengthred]
             const percentages = [percentage0, percentage1, percentage2, percentage3]
             const teams = [name0, name1, name2, name3]
+            const teamdata = []
+            const colors = ['rgba(33, 106, 224, 0.5)', 'rgba(33, 106, 224, 0.5)', 'rgba(209, 3, 0, 0.5)', 'rgba(209, 3, 0, 0.5)']
+            const labels = ["wins", "losses", "ccwm", "opr", "dpr"]
+            for (let j = 0; j < 4; j++) {
+                let currentTeam = obj[teams[j]]
+                let currentTeamData = [currentTeam["wins"], currentTeam["losses"], currentTeam["ccwm"], currentTeam["opr"], currentTeam["dpr"]]
+                teamdata.push(currentTeamData);
+            }
             res.render("stats", {
                 obj: obj,
                 query: query,
                 redblue: redblue,
                 percentages: percentages,
-                teams: teams
+                teams: teams,
+                teamdata: teamdata,
+                labels: labels,
+                colors: colors,
+                alliancestrengths: alliancestrengths
             })
         })
         .catch(error => console.log(error))

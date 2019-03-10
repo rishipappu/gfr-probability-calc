@@ -1,19 +1,22 @@
+.graphcard:hover, .graphcard {
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+}
+
 html,
 body {
   width: 100vw;
-  overflow-x: hidden;
   padding: 0;
   margin: 0;
-  background: #101010;
+  background: #ffffff;
 }
 
 .team {
-  padding: 1em;
+  padding: 0.5em;
   flex: 1 1 25%;
 }
 
 .blue {
-  color: #66a0ff;
+  color: #216ae0;
 }
 
 .red {
@@ -29,12 +32,74 @@ body {
   margin: 1em;
 }
 
-.wrapper {
-  display: flex;
+.teamstats {
+  position: relative;
+  margin-bottom: 5em;
+  margin-left: -2em;
+  width: 31em;
+  height: 31.5em;
 }
 
-.returneddata {
-  color: #ffffff;
+.geninput, .dropdown {
+  display: block;
+  width: 18em;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.blueborder {
+  border: 2px solid #216ae0;
+}
+
+.redborder {
+  border: 2px solid #d10300;
+}
+
+.alliancestrengths {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alliancestrength {
+  padding: 2em;
+  text-align: center;
+  flex: 1 1 50%;
+}
+
+.graphcard {
+  background: #ffffff;
+  box-shadow: 0 0 6px 0 rgba(33, 106, 224, 0.5);
+  width: 20em;
+  border: 2px solid rgba(33, 106, 224, 0.5);
+  border-radius: 5px;
+  float: left;
+  margin: 1em;
+  height: 20em;
+}
+.graphcard:hover {
+  box-shadow: 0 0 20px 0 rgba(33, 106, 224, 0.5);
+}
+
+.graph {
+  margin: 2em 0;
+}
+
+.face {
+  padding: 1em 2em;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamname {
+  margin-top: 3em;
 }
 
 /*# sourceMappingURL=main.css.map */
