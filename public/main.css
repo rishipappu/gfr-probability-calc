@@ -1,71 +1,58 @@
-.graphcard:hover, .graphcard {
-  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
-}
+.graphcard, .graphcard:hover {
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s; }
 
 html,
 body {
   width: 100vw;
   padding: 0;
   margin: 0;
-  background: #ffffff;
-}
+  background: #ffffff; }
 
 .team {
   padding: 0.5em;
-  flex: 1 1 25%;
-}
+  flex: 1 1 25%; }
 
 .blue {
-  color: #216ae0;
-}
+  color: #216ae0; }
 
 .red {
-  color: red;
-}
+  color: red; }
 
 .bluelabel, .redlabel {
   display: block;
-  text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
 .databox {
-  margin: 1em;
-}
+  margin: 1em; }
 
 .teamstats {
   position: relative;
   margin-bottom: 5em;
   margin-left: -2em;
   width: 31em;
-  height: 31.5em;
-}
+  height: 31.5em; }
 
 .geninput, .dropdown {
   display: block;
   width: 18em;
   padding: 10px;
-  border-radius: 5px;
-}
+  border-radius: 5px; }
 
 .blueborder {
-  border: 2px solid #216ae0;
-}
+  border: 2px solid #216ae0; }
 
 .redborder {
-  border: 2px solid #d10300;
-}
+  border: 2px solid #d10300; }
 
 .alliancestrengths {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .alliancestrength {
   padding: 2em;
   text-align: center;
-  flex: 1 1 50%;
-}
+  flex: 1 1 50%; }
 
 .graphcard {
   background: #ffffff;
@@ -75,31 +62,33 @@ body {
   border-radius: 5px;
   float: left;
   margin: 1em;
-  height: 20em;
-}
-.graphcard:hover {
-  box-shadow: 0 0 20px 0 rgba(33, 106, 224, 0.5);
-}
+  height: 20em; }
+  .graphcard:hover {
+    box-shadow: 0 0 20px 0 rgba(33, 106, 224, 0.5); }
 
 .graph {
-  margin: 2em 0;
-}
+  margin: 2em 0; }
 
 .face {
   padding: 1em 2em;
   height: 100%;
-  width: 100%;
-}
+  width: 100%; }
 
 .wrapper {
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  margin-top: 7em; }
 
 .teamname {
-  margin-top: 3em;
-}
+  margin-top: 3em; }
+
+input[type='submit'] {
+  background: transparent;
+  border: 2px solid #d10300;
+  font-size: 1.2em;
+  border-radius: 5px;
+  margin: 1.2em; }
 
 /*# sourceMappingURL=main.css.map */
